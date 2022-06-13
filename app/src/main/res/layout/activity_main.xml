@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:text="MainPage"
+        android:textColor="#ffffff"
+        android:textSize="24dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:background="@color/cardview_dark_background"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="325dp"
+            android:layout_height="400dp"
+            android:layout_centerInParent="true"/>
+
+        <FrameLayout
+            android:id="@+id/chartbox"
+            android:layout_width="325dp"
+            android:layout_height="250dp"
+            android:layout_above="@+id/box"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/dBText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_above="@+id/chartbox"
+            android:text="_ _"
+            android:textSize="110sp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dB"
+            android:textSize="55sp"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@+id/dBText"
+            android:layout_alignBaseline="@+id/dBText"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btn_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Record"
+            android:layout_below="@+id/textView5"
+            android:layout_centerInParent="true"
+            android:layout_toStartOf="@+id/box"/>
+
+        <Button
+            android:id="@+id/btn_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Stop"
+            android:layout_below="@+id/textView5"
+            android:layout_centerInParent="true"
+            android:layout_toEndOf="@+id/box"/>
+
+        <TextView
+            android:id="@+id/box"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/textView5"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
