@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "946480706091",
+    "project_id": "allownoisetome",
+    "storage_bucket": "allownoisetome.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:946480706091:android:57653820cdf439d384706e",
+        "android_client_info": {
+          "package_name": "com.dsu.android.project.allownoisetome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "946480706091-tqlgj7plv0r155uq1gu5lanl9dp0a5pi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dsu.android.project.allownoisetome",
+            "certificate_hash": "e6af4b3599ba0e02b7dcf0e2822f268fa6724aff"
+          }
+        },
+        {
+          "client_id": "946480706091-ud6u48dtvuntck1d8fk9ui56o4upnida.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3i8Jwrnfwi5eiG-uaQSkb8V5YdWHE-7k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "946480706091-ud6u48dtvuntck1d8fk9ui56o4upnida.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

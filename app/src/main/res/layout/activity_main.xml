@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/textTitle"
-        android:text="MainPage"
+        android:text="Allow Noise To Me"
         android:textColor="#ffffff"
         android:textSize="24dp"
         android:textAlignment="center"
@@ -37,15 +37,21 @@
             android:layout_width="325dp"
             android:layout_height="250dp"
             android:layout_above="@+id/box"
-            android:layout_centerInParent="true" />
+            android:layout_centerInParent="true">
+
+            <!--            <com.github.mikephil.charting.charts.LineChart-->
+            <!--                android:id="@+id/chart"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent" />-->
+        </FrameLayout>
 
         <TextView
             android:id="@+id/dBText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/chartbox"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
-            android:layout_above="@+id/chartbox"
             android:text="_ _"
             android:textSize="110sp"
             tools:ignore="MissingConstraints" />

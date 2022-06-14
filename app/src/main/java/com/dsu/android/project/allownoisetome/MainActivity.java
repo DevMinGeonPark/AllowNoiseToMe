@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.media.AudioFormat;
@@ -18,6 +19,10 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -56,6 +61,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         btnStop.setOnClickListener(v -> stopRecording());
+
+        FirebaseMessaging.getInstance().getToken()
+                .addOnCompleteListener(new OnCompleteListener<String>() {
+                    @Override
+                    public void onComplete(@NonNull Task<String> task) {
+                        if (task.isSuccessful()) {// Get new FCM registration token
+                            String token = task.getResult();
+                            Log.d("FCM Log", "FCM 토근 : " + token);
+                            Toast.makeText(MainActivity.this, token, Toast.LENGTH_SHORT).show();
+                        } else {
+                            Log.w("FCM Log", "getInstanceId faild", task.getException());
+                            return;
+                        }
+                    }
+                });
+
+
+
     }
 
     @Override
